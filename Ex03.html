@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 2 số nhập vào</title>
+</head>
+<body>
+<button type="button" onclick="inputNum(2,3)">Click</button>
+<div id="result"></div>
+<script>
+    function inputNum(a,b) {
+       if (a>b){
+           document.getElementById("result").innerHTML=("a lớn hơn b");
+       }else {
+           let c = a+b;
+           document.getElementById("result").innerHTML="Tổng 2 số a b là "+c;
+       }
+    }
+</script>
+</body>
+</html>

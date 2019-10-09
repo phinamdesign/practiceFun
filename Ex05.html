@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm chòm sao</title>
+</head>
+<body>
+<button type="button" onclick="getStart()">Tìm chòm sao</button>
+<div id="result"></div>
+<script>
+    function getStart() {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let index = -1;
+        let start = prompt("Nhập tên sao");
+        for (i=0; i<arr1.length;i++){
+            if (arr1[i]==start){
+                index=i;
+                break;
+            }
+        }
+        if (index==-1){
+            document.getElementById("result").innerHTML="Sao không tồn tại"
+        }else {
+            document.getElementById("result").innerHTML = "Chòm sao tương ứng là "+arr2[index];
+        }
+    }
+</script>
+</body>
+</html>
